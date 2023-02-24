@@ -1,0 +1,162 @@
+/* reset */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --soft-red : hsl(0, 36%, 70%);
+    --accent-red : hsl(0, 93%, 68%);
+    --dark-red : hsl(0, 6%, 24%);
+}
+
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: rgb(219, 223, 237);
+}
+
+
+.heading {
+    padding: 1em;
+}
+
+
+.heading img {
+    width: 130px;
+
+}
+
+
+.hero {
+    display: none;
+    width: 100%;
+}
+
+
+.mobile {
+    display: block;
+}
+
+
+.container {
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+
+.hero__text {
+    color: var(--dark-red);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.3em;
+    letter-spacing: 5.5px;
+}
+
+
+.hero__text p {
+    color: var(--soft-red);
+    font-weight: 300;
+}
+
+
+.paragraph  {
+    color: var(--soft-red);
+    font-size: .9em;
+    line-height: 1.5;
+}
+
+
+form {
+    position: relative;
+}
+
+input {
+    width: 95%;
+    margin-inline: auto;
+    padding: .7em 1.5em;
+    border: 1px solid var(--soft-red);
+    border-radius: 25px;
+    color: var(--soft-red);
+
+}
+
+input::placeholder {
+    color: var(--soft-red);
+}
+
+input:focus {
+    outline: none !important;
+    border:1.5px solid var(--soft-red) ;
+}
+
+
+.btn {
+    position: absolute;
+    right: 5px;
+    width: 50px;
+    height: 35px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--soft-red);
+    cursor: pointer;
+    
+}
+
+.btn:hover {
+    box-shadow: -5px 0px 10px rgb(250, 195, 195);
+
+}
+
+@media (min-width:40em) {
+
+    body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+    }
+
+    main {
+        width: 65em;
+        display: grid;
+        grid-template-columns: 55% 45%;
+        background-image: url(/images/bg-pattern-desktop.svg);
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .hero__img {
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+
+    }
+
+    .container,.heading {
+        text-align: left;
+        width: 75%;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+
+    .hero__text {
+        font-size: 4em;
+        letter-spacing: 10px;
+    }
+
+    .paragraph {
+        font-size: 1em;
+    }
+}
